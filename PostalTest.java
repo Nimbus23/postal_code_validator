@@ -74,7 +74,7 @@ public class PostalTest
             myString = new String(buffer).trim();
         }
         catch(Exception e){}
-        return myString;
+        return myString.toUpperCase();
     }
 }
 
