@@ -43,7 +43,13 @@ public class PostalTest
                 {
                     code = new USZipCode(codeString);
                 }
-                catch (PostalCodeException ex3) {}
+                catch (PostalCodeException ex3) {
+                     try
+                    {
+                        code = new OotumliaPostalCode(codeString);
+                    }
+                    catch (PostalCodeException ex4) {}
+                }
             }
         }
         if (code != null)
